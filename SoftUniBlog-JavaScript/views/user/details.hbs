@@ -1,0 +1,44 @@
+<div class="container body-content">
+    <hr class="classic">
+    <img src="{{user.profilePicture}}" alt="" class="img-responsive img-circle img-profile-lg center-block">
+    <h1 class="text-center text-uppercase">{{user.fullName}}'s Articles</h1>
+    <h4 class="text-center">{{user.description}}</h4>
+    <hr class="classic">
+    <div class="row">
+        <div class="panel-group">
+            {{#each articles}}
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <article>
+                            <div class="panel-title">
+                                <header>
+                                    <img class="img-responsive img-thumbnail" src="{{this.picture}}" alt=""/>
+                                </header>
+                            </div>
+                            <div class="panel-body">
+                                <div class="panel-header">
+                                    <header>
+                                        <h3>{{this.title}}</h3>
+                                    </header>
+                                </div>
+                                <p>{{this.content}}</p>
+                                <br>
+                                <a class="pull-right button" href="/article/details/{{this.id}}">Read
+                                    more
+                                    &raquo;</a>
+                                </footer>
+                            </div>
+
+                            <div class="panel-footer">
+                                <p>Written By:<a href="/user/details/{{this.User.fullName}}">
+                                    <small class="author">{{this.User.fullName}}</small>
+                                </a></p>
+                            </div>
+                        </article>
+                    </div>
+                    <hr class="styled">
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

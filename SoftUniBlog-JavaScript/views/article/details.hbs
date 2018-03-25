@@ -1,0 +1,26 @@
+<div class="container body-content">
+    <h1 class="text-center text-uppercase">{{article.title}}</h1>
+    <hr class="classic">
+    <div class="row">
+        <div class="col-md-12">
+            <article>
+                <div class="article-container">
+                    <img class="img-responsive img-rounded img-article"
+                         src="{{article.picture}}" alt="">
+                    <br>
+                    <p class="text-justify">{{article.content}}</p>
+
+                </div>
+                <hr class="classic">
+                <h4 class="text-center">Written By:
+                    <a href="/user/details/{{user.fullName}}">
+                        <button class="center-block button">
+                            {{user.fullName}}
+                        </button>
+                    </a>
+                </h4>
+                <a class="pull-right button" href="/">Home &raquo;</a>
+            </article>
+        </div>
+    </div>
+</div>
